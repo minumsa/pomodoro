@@ -1,4 +1,5 @@
 import React from "react";
+import "./globals.css";
 
 export const metadata = {
   title: "복제양 뽀모도로",
@@ -23,7 +24,11 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
-  return <body>{children}</body>;
+  return (
+    <html>
+      <body>{children}</body>
+    </html>
+  );
 };
 
 export default Layout;
