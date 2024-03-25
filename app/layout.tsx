@@ -1,14 +1,29 @@
-import "./globals.css";
+import React from "react";
 
 export const metadata = {
-  title: "divdivdiv",
-  description: "재밌는 웹페이지를 만듭니다.",
+  title: "복제양 뽀모도로",
+  openGraph: {
+    title: "복제양 뽀모도로",
+    images: [{ url: "/pomodoro/thumbnail.webp", width: 1800, height: 945 }],
+    locale: "ko_KR",
+    siteName: "divdivdiv",
+    type: "website",
+  },
+  twitter: {
+    title: "복제양 뽀모도로",
+    card: "summary_large_image",
+    creator: "@dev_carver",
+    description: "집중에 성공해 양을 최대한 많이 만드세요.",
+    images: ["https://divdivdiv.com/pomodoro/thumbnail.webp"],
+  },
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html>
-      <body>{children}</body>
-    </html>
-  );
-}
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout = ({ children }: Props) => {
+  return <body>{children}</body>;
+};
+
+export default Layout;
